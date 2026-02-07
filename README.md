@@ -35,7 +35,7 @@ final test_acc=0.9917
 ```
 That's on my old Intel(R) Xeon(R) CPU E5-2695 v2 @ 2.40GHz, so YMMV.
 
-In fact, get better results on my Macbook Air (still CPU, not GPU):
+In fact, I get better results on my Macbook Air (still CPU, not GPU):
 ```
 epoch 1/4  train_loss=0.4049  test_acc=0.9634
 epoch 2/4  train_loss=0.0640  test_acc=0.9859
