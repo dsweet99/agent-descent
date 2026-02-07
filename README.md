@@ -21,7 +21,7 @@ all that smart! It just needs to be disciplined and tenacious.
 
 
 ```bash
-alias pypwd='export PYTHONPATH=${PWD}'
+export PYTHONPATH=${PWD}
 python experiments/mnist/fit_mnist.py
 ```
 
