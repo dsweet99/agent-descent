@@ -7,7 +7,7 @@ Like grad-student descent, but with agents.
 I asked Opus 4.6, inside Cursor's CLI [agent](https://cursor.com/blog/cli) to write a `torch` `nn.Module`, i.e., a neural network along with
 an evaluation script that fit for only 3 minutes and reported the test-set accuracy.
 
-Then I asked it to follow the Popperian approach to the scientific method
+Then I asked it to follow the Popperian approach (KPop) to the scientific method
   1. Hypothesize: Write a falsifiable statement about the problem under study.
   2. Falsify: Run a test that could falsify the hypothesis.
 
@@ -54,3 +54,8 @@ See [exp_log.md](experiments/mnist/exp_log.md) and [exp_log_2.md](experiments/mn
 4. **OneCycleLR schedule mismatch helps**: Configuring OneCycleLR for more epochs than actually complete keeps the LR from decaying too fast.
 
 
+## Low-Budget Humaniod-v5
+
+The idea here is to construct a controller in simulation that could be tuned with only a few rounds of experimental Bayesian optimization. We don't expect our simulations to match reality. We just hope that they're close enough to (i) put us in the ballpark of reality, and (ii) let us know whether the controller is tunable under a reasonable variety of conditions.
+
+I gave Opus [TuRBO-ENN](https://github.com/yubo-research/enn) as a CLI tool to optimize a heuristic controller of its design. It followed the "KPop" approach (described above) and found several ways to improve its baseline controller while developing some understanding of what mattered and what didn't. Read [more](experiments/humanoid/README.md).
